@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Emanbook - Meri Facebook</title>
+</head>
+<body>
+<h1>📘 Emanbook</h1>
+<p>Assalamualaikum! Main Eman hoon. Web Developer Banungi!</p>
+<hr>
+<h2>Meri Post</h2>
+<p>Aaj maine apni pehli website banayi! I trust you ❤️</p>
+<p>Like 👍  Comment 💬  Share 🔗</p>
+<hr>
+<p>© 2026 Emanbook. Meri pehli website.</p>
+<!-- Chat Box Shuru -->
+<div style="background:#FFD6E8; padding:20px; border-radius:15px; margin-top:30px; text-align:center;">
+  <h2>💬 Eman AI se Baat Karo</h2>
+  <input type="text" id="userInput" placeholder="Yahan likho... Salam, Kesi ho?" 
+         style="padding:10px; width:70%; border:2px solid #FF69B4; border-radius:8px;">
+  <button onclick="baatKaro()" style="padding:10px 20px; background:#FF69B4; color:white; border:none; border-radius:8px; cursor:pointer;">
+    Bhejo
+  </button>
+  <p id="jawab" style="margin-top:15px; font-size:18px; color:#333;"></p>
+</div>
+
+<script>
+function baatKaro() {
+  let sawaal = document.getElementById("userInput").value.toLowerCase();
+  let jawabBox = document.getElementById("jawab");
+  
+  if(sawaal.includes("salam")) {
+    jawabBox.innerHTML = "Walaikum Salam meri Eman! Kesi ho? 💖";
+  }
+  else if(sawaal.includes("kesi ho")) {
+    jawabBox.innerHTML = "Main bilkul theek hoon! Tumhari website bana kar khush hoon 😄";
+  }
+  else if(sawaal.includes("khana")) {
+    jawabBox.innerHTML = "mjy biryani" 😊";
+  }
+  else if(sawaal.includes("Mai thak gyi hu")) {
+    jawabBox.innerHTML = "Han meri jan tm panadol medicine ly lo araam hoga😂";
+  }
+  else {
+    jawabBox.innerHTML = "Wah! '" + sawaal + "' - Ye to maine seekha nahi abhi. Ustaad Ji ko sikhaogi? 😉";
+  }
+  
+  document.getElementById("userInput").value = "";
+}
+// Enter dabane se bhi kaam ho jaye
+document.getElementById("userInput").addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    baatKaro();
+  }
+});
+</script>
+<!-- Chat Box Khatam -->
+</body>
+</html>
